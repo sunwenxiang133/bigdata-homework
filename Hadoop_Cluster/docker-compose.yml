@@ -14,7 +14,6 @@ services:
       - '8020:8020'
       - '8030:8030'
       - '9864:9864'
-
     container_name: h01
     stdin_open: true
     tty: true
