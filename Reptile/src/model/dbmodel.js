@@ -10,4 +10,4 @@ const CrawlInfoSchema=new Schema({
     up:{type:String}
 })
 
-exports.CrawInfo=db.model('CrawlInfoSchema',CrawlInfoSchema)
+exports.GhostAnimal=db.model('GhostAnimal',CrawlInfoSchema)
