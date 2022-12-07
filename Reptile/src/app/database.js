@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const config = require('./config')
 
+// console.log(config.APP_HOST);
+
 /*mongoose
   .connect('mongodb://root:JIO150621@162.14.78.140:27017/?retryWrites=true', {
     useNewUrlParser: true,
@@ -18,8 +20,12 @@ const config = require('./config')
   .then(() => console.log('Mongodb连接成功'))
   .catch(err => console.log(err, '数据库连接失败'))*/
 
+const test=`mongodb://${config.MONGO_USER}:${config.MONGO_PASSWORD}@${config.APP_HOST}:${config.APP_PORT}/${config.MONGO_DATABASE}`
+
+console.log(test);
+
 const db = mongoose.createConnection(
-    'mongodb://localhost:27017/bigdataStore',
+    `mongodb://${config.MONGO_USER}:${config.MONGO_PASSWORD}@${config.MONGO_HOST}:${config.MONGO_PORT}/${config.MONGO_DATABASE}`,
     {
         // useCreateIndex: true,
         useNewUrlParser: true, //使用一个新的URL解析器

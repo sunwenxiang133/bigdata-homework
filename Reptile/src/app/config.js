@@ -2,7 +2,7 @@ const dotenv=require('dotenv')
 const fs=require('fs')
 // const path=require('path')
 
-dotenv.config({path:'./config.js'})
+dotenv.config({path:'./config.env'})
 
 module.exports={
     MONGO_HOST,
@@ -14,3 +14,5 @@ module.exports={
     APP_HOST,
     APP_PORT
 }=process.env
+
+// console.log('123123123123123'+process.env.APP_HOST);
